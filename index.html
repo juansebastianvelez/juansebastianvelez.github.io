@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juan Sebastián Vélez | Desarrollador de Automatización e IA</title>
+  <meta name="description" content="Desarrollador de automatización e IA en Medellín. Agentes conversacionales, RAG, MCP y n8n.">
+  <meta property="og:title" content="Juan Sebastián Vélez | Desarrollador de Automatización e IA">
+  <meta property="og:description" content="Agentes de IA para negocios reales. Prueba una demostración y revisa el código.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="tope">
+    <a class="marca" href="#inicio">Juan Sebastián Vélez</a>
+    <nav aria-label="Principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="portada" id="inicio">
+      <div class="portada-texto">
+        <h1>Construyo agentes de IA para negocios reales.</h1>
+        <p class="intro">Soy desarrollador de automatización e IA en Medellín. Diseño agentes que hablan con clientes, consultan datos y actúan solo cuando es seguro hacerlo.</p>
+        <p class="enlaces-portada">
+          <a class="boton" href="#proyectos">Ver proyectos</a>
+          <a class="boton boton-suave" href="CV_Juan_Sebastian_Velez.pdf">Descargar CV</a>
+        </p>
+      </div>
+
+      <section class="demo" aria-labelledby="demo-titulo">
+        <h2 id="demo-titulo">Eres quien aprueba</h2>
+        <p class="demo-ayuda">El agente no puede agendar por su cuenta. Prueba tú. Es una demostración con datos ficticios.</p>
+
+        <ol class="chat">
+          <li class="cliente">Necesito una revisión para el viernes.</li>
+          <li class="agente">Tengo las 9:00 con Ana. ¿Te sirve?</li>
+          <li class="cliente">Sí, confirmo.</li>
+        </ol>
+
+        <div class="borrador">
+          <p class="borrador-titulo">Borrador del agente</p>
+          <p>Listo, Marta. Tu cita quedó para el viernes a las 9:00 con Ana.</p>
+        </div>
+
+        <div class="accion">
+          <div class="contador">
+            <output id="citas" aria-live="polite">0</output>
+            <span id="citas-texto">citas en el calendario</span>
+          </div>
+          <button id="aprobar" type="button">Aprobar cita</button>
+        </div>
+        <p class="estado" id="estado" role="status">Esperando tu aprobación.</p>
+      </section>
+    </section>
+
+    <section class="proyectos" id="proyectos">
+      <div class="seccion-cabeza">
+        <h2>Proyectos</h2>
+        <p>Código público que puedes ejecutar. Son versiones genéricas de sistemas que construí para clientes, con datos ficticios.</p>
+      </div>
+
+      <article class="proyecto proyecto-grande">
+        <div>
+          <h3><a href="https://github.com/juansebastianvelez/agenda-mcp-hitl">Agenda MCP con revisión humana</a></h3>
+          <p>Servidor MCP donde el agente prepara citas y una persona las aprueba desde un panel. Evita duplicados y propone alternativas si el horario se ocupa.</p>
+          <p class="stack">Node.js, SDK de MCP, SQLite, React, WebSocket</p>
+        </div>
+        <img src="panel.jpg" width="1352" height="760" loading="lazy" alt="Panel de revisión con una solicitud de cita pendiente de aprobación">
+      </article>
+
+      <div class="proyectos-resto">
+        <article class="proyecto">
+          <h3><a href="https://github.com/juansebastianvelez/evals-agentes">Evaluación de agentes</a></h3>
+          <p>Compara dos versiones de un agente con clientes simulados, reglas en código, jueces a ciegas e intervalos de confianza.</p>
+          <p class="stack">Python, estadística pareada</p>
+        </article>
+        <article class="proyecto">
+          <h3><a href="https://github.com/juansebastianvelez/plantillas-n8n">Plantillas de n8n</a></h3>
+          <p>Alertas sin duplicados, resumen diario y sincronización controlada, verificadas en n8n con fallos simulados.</p>
+          <p class="stack">n8n, PostgreSQL, Google Sheets</p>
+        </article>
+        <article class="proyecto">
+          <h3><a href="https://github.com/juansebastianvelez/memex-decisiones">Memex de decisiones</a></h3>
+          <p>Memoria por proyecto para agentes de programación: captura los cambios y los convierte en decisiones enlazadas.</p>
+          <p class="stack">Python, hooks de Claude Code</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="experiencia" id="experiencia">
+      <div class="seccion-cabeza">
+        <h2>Experiencia</h2>
+      </div>
+
+      <div class="linea">
+        <article>
+          <p class="fecha">Septiembre de 2025 a octubre de 2026</p>
+          <h3>Fundador y líder técnico en Zobra</h3>
+          <p>Fundé y dirigí una empresa de automatización con IA para negocios. Trabajé con los clientes, diseñé las soluciones y las desarrollé.</p>
+          <ul>
+            <li><strong>Agente de Instagram para un consultorio.</strong> Lo puse en producción en octubre de 2026, con evaluaciones automáticas y camino de respaldo.</li>
+            <li><strong>Agente de WhatsApp con agendamiento.</strong> Lo validé de extremo a extremo, con panel de revisión humana. No llegó a activarse con pacientes.</li>
+            <li><strong>Automatización de miembros de una comunidad.</strong> Datos en PostgreSQL, sincronización con Google Sheets, alertas y resumen diario.</li>
+            <li><strong>Prospección con IA.</strong> Pipeline con 543 prospectos B2B calificados y una aplicación propia para gestionar conversaciones.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="fecha">Abril a octubre de 2026</p>
+          <h3>Formador y consultor en IA para Nova Society</h3>
+          <p>Dicté un curso y 4 clases pagas para los miembros de la comunidad, además de consultorías y guías sobre el uso de Claude.</p>
+        </article>
+        <article>
+          <p class="fecha">Desde 2025</p>
+          <h3>Ingeniería de Sistemas e Informática en la UPB</h3>
+          <p>Cuatro semestres cursados en la Universidad Pontificia Bolivariana, en Medellín.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contacto" id="contacto">
+    <h2>Hablemos</h2>
+    <p>Busco trabajo remoto o en Medellín, en equipos de habla hispana. Mi inglés es B1.</p>
+    <ul>
+      <li><a href="mailto:sebastian.velpal@gmail.com">sebastian.velpal@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/juan-sebastián-vélez-palacio-60474b3a9/">LinkedIn</a></li>
+      <li><a href="https://github.com/juansebastianvelez">GitHub</a></li>
+    </ul>
+  </footer>
+
+  <script src="demo.js"></script>
+</body>
+</html>
